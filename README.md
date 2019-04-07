@@ -1,7 +1,7 @@
-You must create a WHMCS module for this to work. Include the above javascript file in the module's templates/js folder (optional location, but that's WHMCS's preferred standardized location). Then add the following to your module's hooks.php file with the following edits:
+You must create a [WHMCS addon module](https://developers.whmcs.com/addon-modules/) for this to work. Include the above javascript file in the module's templates/js folder (optional location, but that's WHMCS's preferred standardized location). Then add the following to your module's hooks.php file with the following edits:
 - You'll probably want to change the 'my_tab_name' values throughout
 - You will need to change 'my_module_name'
-- If you intend to insert your tab into the supportickets pages, the conditional that compares $vars['filename] should be changed from 'clients' to 'supporttickets'.
+- If you intend to insert your tab into the supportickets pages, the conditional that compares `$vars['filename']` should be changed from 'clients' to 'supporttickets'.
 
 ```
 add_hook("AdminAreaFooterOutput", 10, function($vars){
