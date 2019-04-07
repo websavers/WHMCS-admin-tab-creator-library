@@ -2,6 +2,7 @@ You must create a [WHMCS addon module](https://developers.whmcs.com/addon-module
 - You'll probably want to change the 'my_tab_name' values throughout
 - You will need to change 'my_module_name'
 - If you intend to insert your tab into the supportickets pages, the conditional that compares `$vars['filename']` should be changed from 'clients' to 'supporttickets'.
+- The [sample addon module](https://github.com/WHMCS/sample-addon-module) provided by WHMCS on Github also includes an admin controller class. In this controller, you can use a function like `getlist()` (or whatever name you wish) and that function would handle the AJAX response to br_loadBZTab() found below (which calls 'getlist', but you can modify that if you wish).
 
 ```
 add_hook("AdminAreaFooterOutput", 10, function($vars){
